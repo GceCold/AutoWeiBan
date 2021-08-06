@@ -1,5 +1,7 @@
 # 辅助麦课安全网课学习
 
+**目前因为平台升级，接口失效，等待更新**
+
 ## 下载
 
 [点击进入下载页](https://gitee.com/WeiYuanStudio/AutoWeiBan/releases)
