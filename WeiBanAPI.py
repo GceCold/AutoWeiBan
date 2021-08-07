@@ -4,9 +4,9 @@ import json
 import random
 import time
 
-baseDelayTime = 1  # 基础延时秒数
+baseDelayTime = 20  # 基础延时秒数
 
-randomDelayDeviation = 1  # 叠加随机延时差
+randomDelayDeviation = 20  # 叠加随机延时差
 
 getCookiesURL = 'https://weiban.mycourse.cn/#/login'  # 请求Cookies URL
 
