@@ -1,40 +1,8 @@
-import weiban
-import json
 import time  # time.sleep延时
-import os  # 兼容文件系统
-import random
 
 import fire
 
-tenantCode = '51900002'  # 吉珠院校ID
-
-"""
-# 密码登录，已经失效
-def pwLogin():
-    print(
-        '默认院校为吉林大学珠海学院，ID:' + tenantCode + '\n'
-        + '若有需要，请自行抓包获取院校ID修改' + '\n'
-    )
-
-    # 登录信息输入
-    account = input('请输入账号\n')
-    password = input('请输入密码\n')
-
-    # 获取Cookies
-    print('\n获取Cookies中')
-    cookie = WeiBanAPI.getCookie()
-    print('Cookies获取成功')
-    time.sleep(2)
-
-    randomTimeStamp = random.randint(1E8, 1E12)
-    print('验证码,浏览器打开 https://weiban.mycourse.cn/pharos/login/randImage.do?time={}'.format(randomTimeStamp))
-
-    verifyCode = input('请输入验证码')
-
-    # 登录请求
-    loginResponse = WeiBanAPI.login(account, password, tenantCode, randomTimeStamp, verifyCode, cookie)
-    return loginResponse
-"""
+import weiban
 
 
 class CLI(object):
@@ -43,11 +11,8 @@ class CLI(object):
             if tenant_name in tenant_data['name']:
                 print(f"{tenant_data['name']} -> {tenant_data['code']}")
 
-    def qr_mode(self):
-        pass
-
     def token_mode(self, tenant_code, user_id, user_project_id, token):
-        """手动输入token登录"""
+        """手动输入token等信息登录，您可以在README中找到浏览器console生成执行命令的代码"""
         # 请求用户信息
         try:
             print('请求用户信息')
