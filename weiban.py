@@ -3,6 +3,7 @@ import http.cookiejar
 import json
 import random
 import time
+import requests
 
 baseDelayTime = 20  # 基础延时秒数
 
