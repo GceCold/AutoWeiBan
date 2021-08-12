@@ -17,4 +17,4 @@ console.log(`请在命令行运行： python main.py token_mode ${userData.tenan
 
 ## 注意事项
 
-- 运行前需要安装`requests`依赖，可以使用`pip`进行安装
+- 运行前需要安装`requests`以及`fire`依赖，可以使用`pip`进行安装
