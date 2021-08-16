@@ -2,7 +2,8 @@
 
 ## 更新日志
 
-2021.8.7 修改刷课延迟速度，避免过快导致服务器不认
+- 2021.8.7 修改刷课延迟速度，避免过快导致服务器不认
+- 2021.8.16 网课服务端疑似升级，发包返回502概率极高，原因未知，问题待修复，或者多运行几次也勉强可以刷，详见[不知名的问题 · Issue #I45H4W · WeiYuan/AutoWeiBan - Gitee.com](https://gitee.com/WeiYuanStudio/AutoWeiBan/issues/I45H4W)
 
 ## 使用方法
 
