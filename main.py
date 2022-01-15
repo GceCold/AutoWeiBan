@@ -29,7 +29,9 @@ class CLI(object):
         # 请求课程完成进度
         try:
             get_progress_response = weiban.getProgress(user_project_id,
-                                                       tenant_code)
+                                                       tenant_code,
+                                                       user_id,
+                                                       token)
             print('课程总数：' + str(get_progress_response['data']['requiredNum']) + '\n'
                   + '完成课程：' + str(get_progress_response['data']['requiredFinishedNum']) + '\n'
                   + '结束时间' + str(get_progress_response['data']['endTime']) + '\n'
@@ -45,7 +47,8 @@ class CLI(object):
             get_list_course_response = weiban.getListCourse(user_project_id,
                                                             '3',
                                                             tenant_code,
-                                                            '')
+                                                            user_id,
+                                                            token)
             time.sleep(2)
         except BaseException:
             print('请求课程列表失败')

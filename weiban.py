@@ -125,10 +125,12 @@ def getStuInfo(userId, tenantCode):
 
 
 # 获取课程进度
-def getProgress(userProjectId, tenantCode):
+def getProgress(userProjectId, tenantCode, userId,token):
     param = {
         'userProjectId': userProjectId,
-        'tenantCode': tenantCode
+        'tenantCode': tenantCode,
+        'token': token,
+        'userId': userId
     }
     data = bytes(parse.urlencode(param), encoding='utf-8')
     req = request.Request(url=getProgressURL, data=data, method='POST')
@@ -139,12 +141,13 @@ def getProgress(userProjectId, tenantCode):
 
 
 # 获取课程列表
-def getListCourse(userProjectId, chooseType, tenantCode, name):
+def getListCourse(userProjectId, chooseType, tenantCode, userId,token):
     param = {
         'userProjectId': userProjectId,
         'chooseType': chooseType,
         'tenantCode': tenantCode,
-        'name': name
+        'token': token,
+        'userId': userId
     }
     data = bytes(parse.urlencode(param), encoding='utf-8')
     req = request.Request(url=getListCourseURL, data=data, method='POST')
